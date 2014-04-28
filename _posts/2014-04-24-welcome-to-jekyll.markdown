@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "About Mongo Adventure"
 date:   2014-04-24 18:19:12
 categories: jekyll update
-image: http://placekitten.com/300/200
-image_src: http://placekitten.com/
+image: http://baconmockup.com/300/200
+image_src: http://baconmockup.com/
 ---
 
 You'll find this post in your `_posts` directory - edit this post and re-build (or run with the `-w` switch) to see your changes!
