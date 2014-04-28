@@ -9,36 +9,78 @@
         <!-- syntax highlighting CSS -->
         <link rel="stylesheet" href="/css/syntax.css">
 
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="/css/main.css">
+        <!-- Foundation CSS -->
+        <link rel="stylesheet" href="/css/foundation.min.css">
+        <link rel="stylesheet" href="/css/normalize.css">
+        <link rel="stylesheet" href="/css/custom.css">
+
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+        <script src="/js/vendor/modernizr.js"></script>
     </head>
     <body>
 
-        <div class="site">
-          <div class="header">
-            <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-            <a class="extra" href="/">home</a>
+      <div class="row">
+        <div class="contain-to-grid sticky">
+          <nav class="top-bar" id="menubar" data-topbar>
+            <ul class="title-area">
+              <li class="name">
+                <h1><a href="#"><strong>Mongo Adventure</strong></a></h1>
+              </li>
+               <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+              <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+            </ul>
+
+            <section class="top-bar-section">
+              <!-- Right Nav Section -->
+              <ul class="right">
+                <li class="active"><a href="#">About</a></li>
+                <li class="has-dropdown">
+                  <a href="#">Content</a>
+                  <ul class="dropdown">
+                    <li><a href="#">1. CRUD hacks</a></li>
+                    <li><a href="#">2. Aggregation pipeline</a></li>
+                    <li><a href="#">3. Map / Reduce</a></li>
+                  </ul>
+                </li>
+              </ul>
+
+              <!-- Left Nav Section -->
+              <ul class="left">
+              </ul>
+            </section>
+          </nav>
+        </div>
+      </div>
+
+      <div class="row">
+
+        {{ content }}
+      </div>
+
+      <div class="row">
+        <div class="footer">
+          <hr/>
+          <div class="small-6 columns">
+            <p>
+              Lukasz Mokrzycki<br />
+              Software Developer<br />
+            </p>
           </div>
-
-          {{ content }}
-
-          <div class="footer">
-            <div class="contact">
-              <p>
-                Your Name<br />
-                What You Are<br />
-                you@example.com
-              </p>
-            </div>
-            <div class="contact">
-              <p>
-                <a href="https://github.com/yourusername">github.com/yourusername</a><br />
-                <a href="https://twitter.com/yourusername">twitter.com/yourusername</a><br />
-              </p>
-            </div>
+          <div class="small-6 columns">
+            <p>
+              <a href="https://github.com/mokrzu">github.com/mokrzu</a><br />
+              you know my mail<br />
+            </p>
           </div>
         </div>
+      </div>
 
+      <script src="/js/vendor/jquery.js"></script>
+      <script src="/js/vendor/fastclick.js"></script>
+      <script src="/js/foundation.min.js"></script>
+      <script>
+        $(document).foundation();
+      </script>
     </body>
 </html>
