@@ -7,6 +7,32 @@ image: http://www.fillmurray.com/300/200
 image_src: http://www.fillmurray.com
 ---
 
+##### CREATE
+
+First of all, **insert** isn't the only method, that could create new documents.
+<br>
+Performing **update** operation with, **upsert** flag on, would create new entry,
+when none of current documents match the query.
+
+```js
+> db.tools.update({ name: "rails" }, { $set: { type: "framework" } }, { upsert: true })
+```
+<br>
+
+MongoDb alows creating multipe documents in single insert call. Just pass array with objects.
+
+```js
+> db.tools.insert(
+    [
+      { name: "mongo", type: "db" },
+      { name: "couch", type: "db" }
+    ]
+  )
+```
+<br>
+##### READ
+
+<br>
 ##### UPDATE
 
 At the beginnig, updating records in mongodb could by a litle bit confusing.
@@ -43,3 +69,15 @@ deletes **ALL** documents that match given query.
 > db.tools.remove({ name: "mongo" })
 > // booooom all matching data is lost!
 ```
+<br>
+Delete of single document, could be easly done with **justOne** flag.
+
+```js
+> db.tools.remove({ name: "mongo" }, { justOne: true })
+```
+<br>
+If we have sharded collection and want to use **justOne** flag,
+we need to specify shard key.
+<br>
+We'll take a closer look at this kind of operations in
+*Shards* article.
