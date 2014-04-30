@@ -19,7 +19,25 @@ when none of current documents match the query.
 ```
 <br>
 
-MongoDb alows creating multipe documents in single insert call. Just pass array with objects.
+**Save** method could perform insert or update with *upsert* in single call, but only if *_id* field is specified.
+<br>
+But IMHO it's better to use **update**, because **save** force specifing all field for updated document.
+
+```js
+> db.tools.insert({ _id: 42, name: "postgres", type: "db" })
+>
+> db.tools.save({ name: "postgres", type: "sql-db" })
+> // inserts new document with uniqe _id
+>
+> db.tools.save({ _id: 42, type: "db" })
+> // updates record with id 42
+> // warning: name field will be lost!
+>
+> db.tools.save({ _id: 0, type: "db" })
+> // there's no record with id 0, so new document will be created
+```
+<br>
+MongoDB alows creating multipe documents in single insert call. Just pass array with objects.
 
 ```js
 > db.tools.insert(
@@ -31,6 +49,13 @@ MongoDb alows creating multipe documents in single insert call. Just pass array 
 ```
 <br>
 ##### READ
+
+**Find** could be more powerful than it looks like at the beginning.
+<br>
+Every query in MongoDb starts from specifing collection for search. It's common for find method,
+map/reduce and aggregation framework.
+<br>
+In **find** method requires providing query criteria and returns [Cursor][cursors] as a result, by default mongo shell prints first 20 objects from that cursor.
 
 <br>
 ##### UPDATE
@@ -47,18 +72,67 @@ Let's look at example of **update** operation:
 It swaps whole document content... but what if our intention, was
 to just update type field?
 <br>
-To do so, we need to use **$set** method, as second parameter.
+To do so, we need to use **$set** operator, as second parameter.
 
 ```js
 > db.tools.update({ name: "mongo" }, { $set: { type: "nosql solution" } })
 ```
 <br>
 This operation updates first matching document, in order to perform that change
-for all documents, we need to set **multi** oprtion to **true**.
+for all documents, we need to set **multi** opertion to **true**.
 
 ```js
 > db.tools.update({ name: "mongo", { $set: { type: "nosql db" } }, { multi: true })
 ```
+<br>
+**$set** is one of many update operators for [fields][update_field] and [arrays][update_array].
+
+<table>
+  <thead>
+    <tr>
+      <th> field operators </th>
+      <th> array operators </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>$set</td>
+      <td>$push</td>
+    </tr>
+    <tr>
+      <td>$unset</td>
+      <td>$pop</td>
+    </tr>
+    <tr>
+      <td>$setOnInsert</td>
+      <td>$pull</td>
+    </tr>
+    <tr>
+      <td>$inc</td>
+      <td>$pullAll</td>
+    </tr>
+    <tr>
+      <td>$mul // multiply</td>
+      <td>$addToSet</td>
+    </tr>
+    <tr>
+      <td>$rename</td>
+      <td>.$ // first match in array</td>
+    </tr>
+    <tr>
+      <td>$min</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>$max</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>$currentDate</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
 <br>
 ##### DELETE
 
@@ -81,3 +155,7 @@ we need to specify shard key.
 <br>
 We'll take a closer look at this kind of operations in
 *Shards* article.
+
+[cursors]: http://docs.mongodb.org/manual/core/cursors/
+[update_field]: http://docs.mongodb.org/manual/reference/operator/update-field/
+[update_array]: http://docs.mongodb.org/manual/reference/operator/update-array/
