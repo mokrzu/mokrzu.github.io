@@ -77,9 +77,9 @@ We could apply modifiers...
 > db.tools.find({ name: "jave", version: { $gt: 6.0 }}).sort({ version: -1 })
 ```
 <br>
-You should definetely study other [query operators][query-operators].
-
-
+You should definetely take a look at [query operators][query-operators].
+<br>
+<br>
 ##### UPDATE
 
 At the beginnig, updating records in mongodb could by a litle bit confusing.
