@@ -56,8 +56,30 @@ Every query in MongoDb starts from specifing collection for search. It's common 
 map/reduce and aggregation framework.
 <br>
 In **find** method requires providing query criteria and returns [Cursor][cursors] as a result, by default mongo shell prints first 20 objects from that cursor.
-
 <br>
+We could apply modifiers...
+
+```js
+> db.tools.find({ name: "clojure" }).limit(42)
+```
+<br>
+... or projection filter on results...
+
+```js
+> db.tools.find({ name: "clojure" }, { name: 1, type: 1, _id: 0 })
+```
+<br>
+... or use query operators.
+
+```js
+> db.tools.find({ name: "clojure", version: { $gt: 2.0 })
+>
+> db.tools.find({ name: "jave", version: { $gt: 6.0 }}).sort({ version: -1 })
+```
+<br>
+You should definetely study other [query operators][query-operators].
+
+
 ##### UPDATE
 
 At the beginnig, updating records in mongodb could by a litle bit confusing.
@@ -159,3 +181,4 @@ We'll take a closer look at this kind of operations in
 [cursors]: http://docs.mongodb.org/manual/core/cursors/
 [update_field]: http://docs.mongodb.org/manual/reference/operator/update-field/
 [update_array]: http://docs.mongodb.org/manual/reference/operator/update-array/
+[query-operators]: http://docs.mongodb.org/manual/reference/operator/query/
