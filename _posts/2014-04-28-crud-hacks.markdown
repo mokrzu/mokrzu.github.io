@@ -7,6 +7,15 @@ image: http://www.fillmurray.com/300/200
 image_src: http://www.fillmurray.com
 ---
 
+Let's start from something as elementary as Create, Read, Update, Delete operations.
+<br>
+Compared to other databases, basic input/output operations are very simple and intuitive.
+<br>
+A few years ago, when I was starting working with both SQL and NoSQL database systems, basic Mongo operations were for me much more intuitive than understanding and using SQL statements.
+<br>
+But there are several facts and exceptions, you must to remeber, to avoid common pitfalls.
+
+
 ##### CREATE
 
 First of all, **insert** isn't the only method, that could create new documents.
@@ -74,10 +83,12 @@ We could apply modifiers...
 ```js
 > db.tools.find({ name: "clojure", version: { $gt: 2.0 })
 >
-> db.tools.find({ name: "jave", version: { $gt: 6.0 }}).sort({ version: -1 })
+> db.tools.find({ name: "jave", version: { $lt: 6.0 }}).sort({ version: -1 })
+>
+> db.tools.find({ $or: [ { version: { $gt: 1.0 } }, { status: 'active' } ] })
 ```
 <br>
-You should definetely take a look at [query operators][query-operators].
+You should definetely take a look at rest of [query operators][query-operators].
 <br>
 <br>
 ##### UPDATE
