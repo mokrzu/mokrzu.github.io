@@ -3,8 +3,8 @@ layout: post
 title:  "aggregation pipeline in mongodb"
 date:   2014-04-29 16:06:19
 categories: mongodb
-image: http://www.placebear.com/300/200
-image_src: http://www.placebear.com/
+image: http://placehold.it/300x200&text=aggregation+pipeline
+image_src: http://placehold.it/
 ---
 
 During process of learning MongoDB, aggregation pipeline was probably the bigest suprises I had.

@@ -3,8 +3,8 @@ layout: post
 title:  "mongodb CRUD hacks"
 date:   2014-04-28 16:06:19
 categories: mongodb
-image: http://www.fillmurray.com/300/200
-image_src: http://www.fillmurray.com
+image: http://placehold.it/300x200&text=mongodb+CRUD+hacks
+image_src: http://placehold.it/
 ---
 
 A few years ago, when I was starting working with both SQL and NoSQL database systems, basic Mongo operations were for me much more intuitive than understanding and using SQL statements.
