@@ -1,0 +1,4 @@
+span.redirect {
+  unicode-bidi:bidi-override;
+  direction: rtl;
+}
