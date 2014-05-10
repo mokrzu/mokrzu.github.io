@@ -7,16 +7,12 @@ image: http://www.fillmurray.com/300/200
 image_src: http://www.fillmurray.com
 ---
 
-Let's start from something as elementary as Create, Read, Update, Delete operations.
-<br>
-Compared to other databases, basic input/output operations are very simple and intuitive.
-<br>
 A few years ago, when I was starting working with both SQL and NoSQL database systems, basic Mongo operations were for me much more intuitive than understanding and using SQL statements.
 <br>
 But there are several facts and exceptions, you must to remeber, to avoid common pitfalls.
 
 
-##### CREATE
+##### **CREATE**
 
 First of all, **insert** isn't the only method, that could create new documents.
 <br>
@@ -57,7 +53,7 @@ MongoDB alows creating multipe documents in single insert call. Just pass array 
   )
 ```
 <br>
-##### READ
+##### **READ**
 
 **Find** could be more powerful than it looks like at the beginning.
 <br>
@@ -91,7 +87,7 @@ We could apply modifiers...
 You should definetely take a look at rest of [query operators][query-operators].
 <br>
 <br>
-##### UPDATE
+##### **UPDATE**
 
 At the beginnig, updating records in mongodb could by a litle bit confusing.
 <br>
@@ -167,7 +163,7 @@ for all documents, we need to set **multi** opertion to **true**.
   </tbody>
 </table>
 <br>
-##### DELETE
+##### **DELETE**
 
 The only thing, worth to be mentioned here, is that remove operation by default
 deletes **ALL** documents that match given query.
