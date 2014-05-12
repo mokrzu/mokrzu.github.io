@@ -3,8 +3,6 @@ layout: post
 title:  "mongodb CRUD hacks"
 date:   2014-04-28 16:06:19
 categories: mongodb
-image: http://placehold.it/300x200&text=mongodb+CRUD+hacks
-image_src: http://placehold.it/
 ---
 
 A few years ago, when I was starting working with both SQL and NoSQL database systems, basic Mongo operations were for me much more intuitive than understanding and using SQL statements.
@@ -182,7 +180,7 @@ Delete of single document, could be easly done with **justOne** flag.
 If we have sharded collection and want to use **justOne** flag,
 we need to specify shard key.
 <br>
-We'll take a closer look at this kind of operations in
+I'll take a closer look at this kind of operations in
 *Shards* article.
 
 [cursors]: http://docs.mongodb.org/manual/core/cursors/

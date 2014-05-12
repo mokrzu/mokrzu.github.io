@@ -3,8 +3,6 @@ layout: post
 title:  "aggregation pipeline in mongodb"
 date:   2014-04-29 16:06:19
 categories: mongodb
-image: http://placehold.it/300x200&text=aggregation+pipeline
-image_src: http://placehold.it/
 ---
 
 <div data-alert class="alert-box secondary">
@@ -197,4 +195,4 @@ There is limit of memory usage set to 100Mb, for each computation at each stage.
 Workaround for memory heavy computations is to set **allowDiskUse** to true.
 <br>
 <br>
-Last restriction refer to usage of some [specific data types](http://docs.mongodb.org/manual/core/aggregation-pipeline-limits/#type-restrictions) in aggregation stages.
+Last restriction refers to usage of some [specific data types](http://docs.mongodb.org/manual/core/aggregation-pipeline-limits/#type-restrictions) in aggregation stages.
