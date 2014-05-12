@@ -2,22 +2,16 @@
 layout: default
 title: Lukasz Mokrzycki
 ---
-{% assign sorted_pages = site.posts | sort | reverse %}
+
 <div class="large-12 columns">
   <br/>
   <div id="home">
-    <ul class="small-block-grid-3">
-      {% for post in sorted_pages %}
-        <li>
-          <a href="{{ post.url }}">
-            <div class="th">
-              <img src="{{ post.image }}"/>
-            </div>
-            <br/>
-            <p class="text-center"><b>{{ post.title }}</b></p>
-          </a>
-        </li>
-      {% endfor %}
-    </ul>
+    {% for post in site.posts %}
+      <div class="panel">
+        <a href="{{ post.url }}">
+          <h2 class="text-center"><b>{{ post.title }}</b></h2>
+        </a>
+      </div>
+    {% endfor %}
   </div>
 </div>

@@ -9,7 +9,7 @@ image_src: http://placehold.it/
 
 A few years ago, when I was starting working with both SQL and NoSQL database systems, basic Mongo operations were for me much more intuitive than understanding and using SQL statements.
 <br>
-But there are several facts and exceptions, you must to remeber, to avoid common pitfalls.
+But there are several facts and exceptions, you must to remember, to avoid common pitfalls.
 
 
 ##### **CREATE**
@@ -26,7 +26,7 @@ when none of current documents match the query.
 
 **Save** method could perform insert or update with *upsert* in single call, but only if *_id* field is specified.
 <br>
-But IMHO it's better to use **update**, because **save** force specifing all field for updated document.
+But IMHO it's better to use **update**, because **save** force specifying all field for updated document.
 
 ```js
 > db.tools.insert({ _id: 42, name: "postgres", type: "db" })
@@ -84,12 +84,12 @@ We could apply modifiers...
 > db.tools.find({ $or: [ { version: { $gt: 1.0 } }, { status: 'active' } ] })
 ```
 <br>
-You should definetely take a look at rest of [query operators][query-operators].
+You should definitely take a look at rest of [query operators][query-operators].
 <br>
 <br>
 ##### **UPDATE**
 
-At the beginnig, updating records in mongodb could by a litle bit confusing.
+At the beginning, updating records in mongodb could by a little bit confusing.
 <br>
 Let's look at example of **update** operation:
 
@@ -108,7 +108,7 @@ To do so, we need to use **$set** operator, as second parameter.
 ```
 <br>
 This operation updates first matching document, in order to perform that change
-for all documents, we need to set **multi** opertion to **true**.
+for all documents, we need to set **multi** operation to **true**.
 
 ```js
 > db.tools.update({ name: "mongo", { $set: { type: "nosql db" } }, { multi: true })

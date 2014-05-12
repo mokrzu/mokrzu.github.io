@@ -2,3 +2,9 @@ span.redirect {
   unicode-bidi:bidi-override;
   direction: rtl;
 }
+
+.panel {
+  border-width: 5px;
+  border-color: #5B4034;
+  background-color: #E7E4D3;
+}
