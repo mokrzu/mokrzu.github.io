@@ -2,7 +2,7 @@
 layout: post
 title:  "(def awesome (+ clojure music))"
 date:   2014-04-30 16:06:19
-categories: mongodb
+categories: clojure
 image: http://placehold.it/300x200&text=map+reduce
 image_src: http://placehold.it
 ---
