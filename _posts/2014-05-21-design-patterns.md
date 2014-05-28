@@ -5,10 +5,19 @@ date:   2014-05-21 16:06:19
 categories: mongodb
 ---
 
-Here's a few of my thoughts about ["MongoDb Applied Design Pattern"](http://shop.oreilly.com/product/0636920027041.do) written by Rick Copeland.
+<div data-alert class="alert-box secondary">
+  Watch out, it's still a draft of the article and may contain small bugs. But feel welcome to read:)
+  <a href="#" class="close">&times;</a>
+</div>
+
+Here's a few of my thoughts about **"MongoDb Applied Design Pattern"** written by Rick Copeland.
 <br>
 Presented book consist from two parts and I will focus on first part of the book.
+<br>
 
+<a href="http://shop.oreilly.com/product/0636920027041.do">
+  <img src="http://akamaicovers.oreilly.com/images/0636920027041/cat.gif" />
+</a>
 
 #### Design patterns
 
@@ -69,6 +78,6 @@ Don't be biased and don't drop chapters that are not in your main domain complet
 There is plenty of useful tips in this second part of the book, but you probably want
 read all parts with details.
 <br>
-That content is quite similar to ["50 Tips for MongoDB Developers"](http://shop.oreilly.com/product/0636920019893.do).
+That content is quite similar to **["50 Tips for MongoDB Developers"](http://shop.oreilly.com/product/0636920019893.do)**.
 Although, understanding concepts from first part "Design Pattern" is necessary for
 understanding "Use cases" part and book mentioned above.

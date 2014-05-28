@@ -6,7 +6,7 @@ categories: mongodb
 ---
 
 <div data-alert class="alert-box secondary">
-  Watch out, it's still a draft of the article and may contains small bugs. But feel welcome to read:)
+  Watch out, it's still a draft of the article and may contain small bugs. But feel welcome to read:)
   <a href="#" class="close">&times;</a>
 </div>
 
