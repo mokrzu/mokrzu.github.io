@@ -28,12 +28,12 @@ The books begins with introduction of most common puzzle during designing docume
 MongoDB is called as "schema-less", but this don't mean that our data has no structure.
 <br>
 It just don't restrict how entries should look like for each input/update operation, but schema comes from
-your application data model. The puzzle is to decide between normalized or denormalized structure of
+your application data model. The puzzle is to decide between *normalized* or *denormalized* structure of
 data in database.
 <br>
 <br>
-Normalization is almost always preferred approach in rational database system,
-using them we have simplified task, because choice is obvious. Using document data store, like MongoDB,
+In rational database system (SQL), normalization is almost always preferred approach.
+When we use them, we have simplified task, because choice is obvious. Using document data store, like MongoDB,
 there's no silver bullet.
 That's the reason why in this book, phrase "It depends." occurs so often.
 Important lesson from this chapter, is to think about most common queries and it's results,

@@ -5,11 +5,6 @@ date:   2014-04-29 16:06:19
 categories: mongodb
 ---
 
-<div data-alert class="alert-box secondary">
-  Watch out, it's still a draft of the article and may contain small bugs. But feel welcome to read:)
-  <a href="#" class="close">&times;</a>
-</div>
-
 During process of learning MongoDB, aggregation pipeline was probably the biggest surprises I had.
 <br>
 At present moment it's presented as an alternative for Map/Reduce queries.
@@ -180,14 +175,14 @@ At the end, use **sort** and **limit** stages to pick entry with biggest amount.
 ##### **Optimization and Limitations**
 
 Flexibility of choosing and ordering stages of aggregation pipeline makes it extremely easy to
-apply for wide set of tasks. But you should try to put operators that filter data, closely to it start.
-That will lead to faster data flow, between stage what provides better performance for entire computation.
+apply for wide set of tasks. But you should try to move operators that filter data, closely to it start.
+That will lead to faster data flow between stages, and finally provides better performance for entire computation.
 Indexing fields which are used by **$match** and **$sort** also provides boost in performance.
 <br>
 <br>
 Before MongoDB 2.6 biggest restriction was limit for output(16 Mb).
 <br>
-Aggregation could return Cursor or you specify collection where output documents will be stored (**$out** operator), so that limitation no longer exists.
+Aggregation returns Cursor or you could specify collection where output documents will be stored (**$out** operator), so that limitation no longer exists.
 <br>
 <br>
 There is limit of memory usage set to 100Mb, for each computation at each stage.
