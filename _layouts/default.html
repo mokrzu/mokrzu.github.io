@@ -37,9 +37,13 @@
                 <li class="has-dropdown">
                   <a href="#">posts</a>
                   <ul class="dropdown">
-                    <li><a href="/mongodb/crud-hacks.html">mongodb CRUD hacks</a></li>
-                    <li><a href="/mongodb/aggregation-pipeline.html">aggregation pipeline in mongodb</a></li>
-                    <li><a href="/clojure/clojure-music.html">(def awesome (+ clojure music))</a></li>
+                    {% for post in site.posts %}
+                      <li>
+                        <a href="{{ post.url }}">
+                          {{ post.title }}
+                        </a>
+                      </li>
+                    {% endfor %}
                   </ul>
                 </li>
               </ul>

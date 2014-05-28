@@ -1,4 +1,4 @@
 name: Mokrzu
 markdown: redcarpet
-pygments: true
+highliter: pygments
 permalink: none
