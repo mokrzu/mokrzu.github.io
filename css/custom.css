@@ -8,3 +8,7 @@ span.redirect {
   border-color: #5B4034;
   background-color: #E7E4D3;
 }
+
+#author {
+  max-height: 600px;
+}
