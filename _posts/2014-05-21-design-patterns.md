@@ -5,11 +5,6 @@ date:   2014-05-21 16:06:19
 categories: mongodb
 ---
 
-<div data-alert class="alert-box secondary">
-  Watch out, it's still a draft of the article and may contain small bugs. But feel welcome to read:)
-  <a href="#" class="close">&times;</a>
-</div>
-
 Here's a few of my thoughts about **"MongoDb Applied Design Pattern"** written by Rick Copeland.
 <br>
 Presented book consist from two parts and I will focus on first part of the book.
