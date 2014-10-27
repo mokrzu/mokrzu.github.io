@@ -31,4 +31,4 @@ But if we find and remove every suspicious case from our dataset, it’s value w
 
 Solution for that, is to find optimal trade-off point between privacy protection and data utility. It requires measuring risk of de-identification on a dataset. After that you could when level of dataset protection is high enough. Removing identifiers is not only way to increase that level, you could also generalise some fields, reducing precision. For example instead of full address, you provide only town, or state. When sharing dataset, you could share only it’s subset, which has lower risk score.
 
-**TBC**
+**...**
